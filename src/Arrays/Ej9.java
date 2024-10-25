@@ -1,30 +1,30 @@
 package Arrays;
 
 public class Ej9 {
-    public static int positivos(int[] numeros) {
-        int positivos = 0;
+    public static int pares(int[] numeros) {
+        int pares = 0;
         for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] > 0) {
-                positivos ++;
+            if (numeros[i] % 2 == 0) {
+                pares++;
             }
         }
-        return positivos;
+        return pares;
     }
 
-    public static int negativos(int[] numeros) {
-        int negativos = 0;
+    public static int impares(int[] numeros) {
+        int impares = 0;
         for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] < 0) {
-                negativos ++;
+            if (numeros[i] % 2 != 0) {
+                impares++;
             }
         }
-        return negativos;
+        return impares;
     }
     public static void main(String[] args) {
-        int[] numeros = {1,4,5,-4,-4,-5};
+    int[] numeros = {1,4,5,-4,-4,-5};
 
-        System.out.println("Tus positivos son: " + positivos(numeros) + " numeros");
-        System.out.println("Tus negativos son: " + negativos(numeros) + " numeros");
+        System.out.println("Tus pares son: " + pares(numeros));
+        System.out.println("Tus impares son: " + impares(numeros));
     }
 }
 
